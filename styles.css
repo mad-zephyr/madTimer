@@ -2,10 +2,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background: rebeccapurple;
-}
-
 :root {
   --timer-color: rgb(245, 245, 9);
   --timer-title-color: rgb(27, 27, 27);
