@@ -217,8 +217,9 @@ class Timer {
   }
 
   connect() {
-    this.parent.forEach((timer) => {
-      console.log(timer);
+    const targets = document.querySelectorAll(this.parent);
+
+    targets.forEach((timer) => {
       const timerBlock = this.createTimer();
       timer.insertAdjacentElement("afterbegin", timerBlock);
 
@@ -235,8 +236,7 @@ class Timer {
   }
 }
 
-const timers = document.querySelectorAll(".webinar-timer");
 // const timer
 new Timer({
-  parent: timers,
+  parent: ".webinar-timer",
 }).connect();
