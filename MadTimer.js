@@ -218,7 +218,7 @@ class Timer {
 
   connect() {
     const targets = document.querySelectorAll(this.parent);
-    console.log("TIMER CONNECTED");
+
     targets.forEach((timer) => {
       const timerBlock = this.createTimer();
       timer.insertAdjacentElement("afterbegin", timerBlock);

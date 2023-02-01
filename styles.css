@@ -10,6 +10,7 @@
   --font-family: "Lato";
   --font-size: 40px;
   --timer-title-size: 18px;
+  --timer-title-margin-top: 6px;
   --timer-numbers-size: 44px;
 }
 
@@ -58,6 +59,7 @@
   font: normal var(--timer-title-size) "Lato";
   color: #1a1a1a;
   text-transform: uppercase;
+  margin-top: var(--timer-title-margin-top);
 }
 
 .figure {
