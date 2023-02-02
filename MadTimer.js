@@ -256,6 +256,6 @@ class Timer {
 
 // const timer
 
-new Timer({
-  parent: ".webinar-timer",
-}).connect();
+// new Timer({
+//   parent: ".webinar-timer",
+// }).connect();
