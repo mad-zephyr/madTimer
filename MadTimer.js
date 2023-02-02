@@ -40,6 +40,8 @@ class Countdown {
   }
 
   getTime(initial = 59) {
+    const currentTime = new Date();
+
     const minutes = initial - currentTime.getMinutes();
     const seconds = 60 - currentTime.getSeconds();
 
