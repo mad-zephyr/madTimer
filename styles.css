@@ -9,7 +9,10 @@
   --timer-background-top: #5c5b5b;
   --font-family: "Lato";
   --font-size: 40px;
-  --timer-title-size: 18px;
+  --timer-title-font: 18px;
+  --timer-title-fonr-family: "Lato";
+  --timer-title-transform: uppercase;
+  --timer-title-color: #1a1a1a;
   --timer-title-margin-top: 6px;
   --timer-numbers-size: 44px;
 }
@@ -56,9 +59,9 @@
 .countdown .count-title {
   display: block;
   margin-bottom: 15px;
-  font: normal var(--timer-title-size) "Lato";
-  color: #1a1a1a;
-  text-transform: uppercase;
+  font: normal var(--timer-title-size) var(--timer-title-fonr-family);
+  color: var(--timer-title-color);
+  text-transform: var(--timer-title-transform);
   margin-top: var(--timer-title-margin-top);
 }
 
