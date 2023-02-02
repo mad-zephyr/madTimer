@@ -154,12 +154,7 @@ class Countdown {
 }
 
 class Timer {
-  constructor(config) {
-    this.config = config.initial || this._initialConfig;
-    this.parent = config.parent;
-  }
-
-  _initialConfig = [
+  #_initialConfig = [
     {
       name: "hours",
       initialValue: "00",
@@ -176,6 +171,11 @@ class Timer {
       subtitle: "Секунды",
     },
   ];
+
+  constructor(config) {
+    this.config = config.initial || this.#_initialConfig;
+    this.parent = config.parent;
+  }
 
   create(initialValue, name, subtitle) {
     const block = document.createElement("div");
@@ -255,3 +255,7 @@ class Timer {
 }
 
 // const timer
+
+new Timer({
+  parent: ".webinar-timer",
+}).connect();
