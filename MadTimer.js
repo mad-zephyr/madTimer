@@ -39,16 +39,14 @@ class Countdown {
     this.count();
   }
 
-  getTime(initial = 60) {
-    const currentTime = new Date();
-
+  getTime(initial = 59) {
     const minutes = initial - currentTime.getMinutes();
     const seconds = 60 - currentTime.getSeconds();
 
     const values = {
       hours: 0,
       minutes: minutes,
-      seconds: minutes === 60 ? 0 : seconds,
+      seconds: minutes === 59 ? 0 : seconds,
     };
 
     const all_seconds =
@@ -57,7 +55,7 @@ class Countdown {
     return { values, all_seconds };
   }
 
-  count(initial = 60) {
+  count(initial) {
     const that = this;
     const $hour_1 = this.$.hours.eq(0);
     const $hour_2 = this.$.hours.eq(1);
