@@ -1,4 +1,4 @@
-const initialConfig = [
+const _initialConfig = [
   {
     name: "hours",
     initialValue: "00",
@@ -155,9 +155,27 @@ class Countdown {
 
 class Timer {
   constructor(config) {
-    this.config = config.initial || initialConfig;
+    this.config = config.initial || this._initialConfig;
     this.parent = config.parent;
   }
+
+  _initialConfig = [
+    {
+      name: "hours",
+      initialValue: "00",
+      subtitle: "Часы",
+    },
+    {
+      name: "min",
+      initialValue: "00",
+      subtitle: "Минуты",
+    },
+    {
+      name: "sec",
+      initialValue: "00",
+      subtitle: "Секунды",
+    },
+  ];
 
   create(initialValue, name, subtitle) {
     const block = document.createElement("div");
