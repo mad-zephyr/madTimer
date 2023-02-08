@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-:root {
+/* :root {
   --timer-color: rgb(245, 245, 9);
   --timer-title-color: rgb(27, 27, 27);
   --timer-background: #6d6c6c;
@@ -16,7 +16,7 @@
   --timer-title-color: #1a1a1a;
   --timer-title-margin-top: 6px;
   --timer-numbers-size: 44px;
-}
+} */
 
 .webinar-timer {
   width: 400px;
