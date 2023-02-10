@@ -1,4 +1,4 @@
-const _initialConfig = [
+const timerConfig = [
   {
     name: "hours",
     initialValue: "00",
@@ -154,7 +154,7 @@ class Countdown {
 }
 
 class Timer {
-  #_initialConfig = [
+  static _initialConfig = [
     {
       name: "hours",
       initialValue: "00",
@@ -173,14 +173,16 @@ class Timer {
   ];
 
   constructor(config) {
-    this.config = config.initial || this.#_initialConfig;
+    this.config = config.initial || this._initialConfig;
     this.parent = config.parent;
   }
 
   create(initialValue, name, subtitle) {
     const block = document.createElement("div");
     const classes = ["bloc-time", name];
-    classes.forEach((clas) => block.classList.add(clas));
+    classes.forEach((className) => block.classList.add(className));
+
+    block.style.width = `calc(100% / ${this.config.length})`;
 
     block.innerHTML = `
       <div class="figureWrapper" data-init-value="${initialValue.join("")}">
@@ -258,4 +260,5 @@ class Timer {
 
 // new Timer({
 //   parent: ".webinar-timer",
+//   initial: timerConfig,
 // }).connect();

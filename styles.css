@@ -2,21 +2,23 @@
   box-sizing: border-box;
 }
 
-/* :root {
-  --timer-color: rgb(245, 245, 9);
+:root {
+  --timer-color: rgb(255, 255, 255);
   --timer-title-color: rgb(27, 27, 27);
   --timer-background: #6d6c6c;
   --timer-background-top: #5c5b5b;
-  --font-family: "Futura new";
+  --font-family: "Bebas", Arial, sans-serif;
+  --timer-weight: 400;
   --font-size: 40px;
 
   --timer-title-font: 18px;
-  --timer-title-font-family: "Futura new";
+  --timer-title-font-family: "Bebas", Arial, sans-serif;
+  --timer-title-font-weight: 500;
   --timer-title-transform: uppercase;
   --timer-title-color: #1a1a1a;
   --timer-title-margin-top: 6px;
   --timer-numbers-size: 44px;
-} */
+}
 
 .webinar-timer {
   width: 400px;
@@ -60,7 +62,7 @@
 .countdown .count-title {
   display: block;
   margin-bottom: 15px;
-  font-weight: normal;
+  font-weight: var(--timer-title-font-weight);
   font-size: var(--timer-title-size);
   font-family: var(--timer-title-font-family);
   color: var(--timer-title-color);
@@ -94,7 +96,7 @@
   margin: auto;
   font-family: var(--font-family);
   font-size: var(--timer-numbers-size);
-  font-weight: 700;
+  font-weight: var(--timer-weight);
   color: var(--timer-color);
 }
 
@@ -144,12 +146,12 @@
 
 .bottom {
   position: relative;
-  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 50%;
+  z-index: 1;
 }
 
 .bottom span {
@@ -158,9 +160,9 @@
   align-items: center;
   line-height: 1;
   justify-content: center;
-  z-index: 1;
   height: 100%;
   bottom: -50%;
+  z-index: 1;
 }
 .bottom:before {
   content: "";
@@ -206,14 +208,15 @@
   bottom: 0%;
   left: 0;
   transform: translate(0%, 50%);
+  z-index: 1;
 }
 .top,
 .top-back {
   height: 50%;
   overflow: hidden;
-  -moz-backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+  -moz-backface-visibility: hidden !important;
+  -webkit-backface-visibility: hidden !important;
+  backface-visibility: hidden !important;
 }
 .top-back {
   z-index: 4;
@@ -243,4 +246,5 @@
   right: 0;
   height: 100%;
   transform: translateY(-50%);
+  z-index: 1;
 }
